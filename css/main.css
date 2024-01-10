@@ -1,0 +1,189 @@
+#player-container,
+#background-container {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+}
+#player-container {
+  z-index: 2;
+}
+#background-container {
+  z-index: 0;
+}
+.spine-player-canvas {
+  width: 100vw;
+  height: 90vh;
+}
+.statsjs-container canvas {
+  width: 120px !important;
+  height: calc(120px * (3 / 5)) !important;
+}
+.spine-player-controls {
+  position: fixed;
+  bottom: 0;
+}
+.chrSect {
+  position: absolute;
+  top: 10%;
+  bottom: 10%;
+  left: 0;
+  max-width: 30%;
+  min-width: 320px;
+  border-radius: 15px;
+  border: 2px solid #fff;
+  overflow: auto;
+  z-index: 10;
+}
+
+.nextProcess {
+  height: 0 !important;
+}
+
+.overlay,
+form {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  width: 100%;
+  font-size: 1.1em;
+}
+
+form :is(h1, h2, h3, h4, h5, h6) {
+  font-weight: bolder;
+  white-space: pre-wrap;
+}
+
+.upload-box {
+  width: 90%;
+  position: relative;
+  height: 10em;
+  border: 1px solid #808080;
+  box-shadow: 2px 3px 9px #787878;
+  padding: 10px;
+  overflow: auto;
+}
+
+.upload-box input {
+  width: inherit;
+  position: fixed;
+  padding: 1px;
+  border: 1px solid #fff;
+}
+
+.upload-box #preview {
+  margin-top: 2em;
+}
+
+.upload-box .buttons {
+  z-index: 2;
+  position: fixed;
+  position: absolute;
+  right: 0.7em;
+  top: 0.7em;
+}
+
+form.sort ul {
+  width: 90%;
+  min-height: 3em;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 1em;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  border: 2px dashed white;
+}
+
+form.sort footer {
+  margin-top: 1.5em;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form.sort footer ul {
+  border: 2px dashed skyblue;
+}
+
+form.sort .buttons {
+  margin-top: 1em;
+  display: flex;
+  width: 10em;
+  justify-content: space-around;
+}
+
+form.sort button {
+  appearance: none;
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  box-shadow: 2px 3px 9px #787878;
+}
+
+.tips {
+  margin-top: 1em;
+}
+
+.tips details {
+  padding-left: 1em;
+}
+
+input#count {
+  border: none;
+  height: 0;
+  width: 0;
+  background: transparent;
+  appearance: none;
+}
+.spine-player-button-icon-feature {
+  background-image: url("./icons/feature.svg");
+  filter: invert(100%);
+}
+.spine-player-button-icon-feature:hover,
+.spine-player-button-icon-voices:hover {
+  filter: invert(70%) sepia(50%) saturate(1500%) hue-rotate(170deg);
+}
+
+#bgm {
+  opacity: 0;
+  width: 90%;
+}
+
+#bgm:hover,
+#bgm:focus,
+#bgm:active {
+  opacity: 1 !important;
+}
+#bgm::-webkit-media-controls-panel,
+#bgm::-webkit-media-controls-enclosure {
+  background: transparent !important;
+}
+
+.genReq {
+  position: absolute;
+  bottom: 5px;
+}
+
+@media (orientation: portrait) and (max-width: 768px) {
+  .statsjs-container canvas {
+    width: 28vw !important;
+    height: calc(28vw * (3 / 5)) !important;
+  }
+  #player-container {
+    max-width: 100vw;
+  }
+
+  .spine-player-canvas {
+    margin-top: 7%;
+    height: 95%;
+  }
+  #bgm {
+    width: 100%;
+  }
+}

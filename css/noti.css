@@ -1,0 +1,32 @@
+.sysNotify {
+  display: flex;
+  position: fixed;
+  right: 1em;
+  top: 0;
+  width: 60%;
+  flex-direction: column;
+  color: limegreen;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+.sysNotify .noti {
+  display: flex;
+  flex-wrap: wrap;
+}
+.sysNotify .noti button.cv-play {
+  margin-left: 1em;
+  width: 25px;
+  height: 25px;
+  padding: 0;
+}
+form.multiCharWarn {
+  color: white;
+  border: 4px sandybrown dashed;
+  background-color: transparent;
+}
+
+@media (orientation: portrait) and (max-width: 768px) {
+  .sysNotify {
+    width: 100%;
+  }
+}

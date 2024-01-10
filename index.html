@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spine Web Viewer</title>
+  <link rel="stylesheet" href="https://unpkg.com/@esotericsoftware/spine-player@4.0.*/dist/spine-player.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="./css/bootstrap.css" />
+  <link rel="stylesheet" href="./css/main.css" />
+  <link rel="stylesheet" href="./css/noti.css" />
+  <script type="importmap">
+      {
+        "imports": {
+          "jszip": "https://cdn.jsdelivr.net/npm/jszip@latest/+esm",
+          "sortablejs": "https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/+esm",
+          "statsjs": "https://cdn.jsdelivr.net/npm/stats.js@latest/+esm",
+          "soundPlayer.js": "./lib/soundPlayer.js"
+        }
+      }
+    </script>
+  <script type="module" src="./main.js"></script>
+</head>
+
+<body>
+  <form>
+    <h3>Upload the File!</h3>
+    <div class="upload-box">
+      <div class="buttons"><button type="submit">submit</button></div>
+      <input class="btn-file d-none" type="file" multiple />
+      <div id="preview"></div>
+    </div>
+    <details class="tips" open>
+      <summary>Tips</summary>
+      <details>
+        <summary>using on PC</summary>
+        If your using on PC, multiple file Drag&drop is allowed.
+      </details>
+      <details>
+        <summary>SomeThing Wrong?</summary>
+        Just Reflesh the page!
+      </details>
+      <details>
+        <summary>Can it Supports...?</summary>
+        <ul>
+          <li>
+            Supports multiple zip file.
+          </li>
+          <li>
+            Cannot be Lower then 3.7.00  
+            Cannot be higher then 4.2.99
+          </li>
+        </ul>
+      </details>
+    </details>
+  </form>
+  <form class="sort hide">
+    <h3>Please sort files.</h3>
+    <span>character</span>
+    <ul class="chrs" id="chr"></ul>
+
+    <span>background</span>
+    <ul class="bgis hide" id="bgi"></ul>
+    <footer>
+      <span>sort from files...</span>
+      <ul class="files"></ul>
+      <div class="buttons">
+        <button type="submit">submit</button><button type="reset">reset</button>
+      </div>
+    </footer>
+  </form>
+  <div id="player-voice">
+    <audio id="bgm" autoplay controlsList="nodownload"></audio>
+    <audio id="cv" autoplay></audio>
+  </div>
+  <div id="player-container" class="hide"></div>
+  <div id="background-container" class="hide"></div>
+  <div class="sysNotify hide"></div>
+</body>
+
+</html>
